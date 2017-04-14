@@ -4,6 +4,8 @@ class Url < ApplicationRecord
 
   after_create :parse_url
 
+  validates :page_url, presence: true
+
   require 'nokogiri'
   require 'open-uri'
 
