@@ -9,7 +9,7 @@ class UrlsController < ApplicationController
   def show
     @url = Url.find(params[:id])
 
-    render json: @url
+    render json: @url.page_content
   end
 
   def create
@@ -34,7 +34,7 @@ class UrlsController < ApplicationController
 
   def destroy
     @url = Url.find(params[:id])
-    @url.destroyurls
+    @url.destroy
   end
 
   private
