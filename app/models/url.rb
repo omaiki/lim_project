@@ -1,10 +1,9 @@
 class Url < ApplicationRecord
 
-  has_many :url_contents, dependent: :destroy
+  has_many :url_contents
+  validates :page_url, presence: true
 
   after_create :parse_url
-
-  validates :page_url, presence: true
 
   require 'nokogiri'
   require 'open-uri'

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
   Url.create(:page_url => "https://www.youtube.com")
+  Url.create(:page_url => "https://ruby-doc.org/")
 
-  UrlContent.create(:url_id => 1, :tag => "a", :content => "test" )
 
 

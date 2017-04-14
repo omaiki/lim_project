@@ -15,7 +15,7 @@ class UrlsController < ApplicationController
     @url = Url.create(url_params)
 
     if @url.save
-      render json: @url, status: :created
+      render json: @url, status: :created, location: @url
     else
       render json: @url.errors, status: :unprocessable_entity
     end
