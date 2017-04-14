@@ -1,11 +1,10 @@
 class Url < ApplicationRecord
-
-  has_many :url_contents, dependent: :destroy
-
-  after_create :parse_url
-
   require 'nokogiri'
   require 'open-uri'
+
+  has_one :url_content, dependent: :destroy
+
+  after_create :parse_url
 
    def parse_url
     doc = Nokogiri::HTML(open(self.page_url))
