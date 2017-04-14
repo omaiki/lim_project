@@ -1,0 +1,2 @@
+class UrlParserController < ApplicationController
+end
