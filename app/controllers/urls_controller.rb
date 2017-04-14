@@ -34,7 +34,7 @@ class UrlsController < ApplicationController
 
   def destroy
     @url = Url.find(params[:id])
-    @url.destroy
+    @url.destroyurls
   end
 
   private
