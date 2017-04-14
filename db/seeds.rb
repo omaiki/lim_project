@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-  Url.create({:page_url => "http://www.google.com"})
+  Url.create(:page_url => "https://www.youtube.com")
 
-  UrlContent.create({:url_id => 1, :tag => "a", :content => "test" })
+  UrlContent.create(:url_id => 1, :tag => "a", :content => "test" )
 
 

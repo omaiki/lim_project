@@ -8,7 +8,7 @@ class UrlsController < ApplicationController
   def show
     @url = Url.find(params[:id])
 
-    render json: @url.page_content
+    render json: @url
   end
 
   def create
@@ -35,6 +35,11 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
     @url.destroy
   end
+
+  def url_contents
+    render json: @url.url_contents
+  end
+
 
   private
 

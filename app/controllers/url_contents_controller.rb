@@ -3,7 +3,7 @@ class UrlContentsController < ApplicationController
   def index
     # only index required
     @url_contents = UrlContent.all
-  def end
+  end
 
   def show
     @url_content = UrlContent.find(params[:id])
