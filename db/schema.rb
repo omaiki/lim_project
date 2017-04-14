@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170414021544) do
+ActiveRecord::Schema.define(version: 20170414035232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "urls", force: :cascade do |t|
-    t.string   "page_url"
-    t.json     "page_content"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+  create_table "url_contents", force: :cascade do |t|
+    t.string   "tag"
+    t.string   "content"
+    t.integer  "url_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["url_id"], name: "index_url_contents_on_url_id", using: :btree
   end
 
+  create_table "urls", force: :cascade do |t|
+    t.string   "page_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "url_contents", "urls"
 end

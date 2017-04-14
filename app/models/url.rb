@@ -2,8 +2,10 @@ class Url < ApplicationRecord
 
   has_many :url_contents, dependent: :destroy
 
-  def parse_url
-    doc = Nokogiri::HTML(open(self.page))
+  after_create :parse_url
+
+   def parse_url
+
   end
 
 
