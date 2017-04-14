@@ -2,6 +2,8 @@ class Url < ApplicationRecord
   require 'nokogiri'
   require 'open-uri'
 
+  include UrlsHelper
+
   has_one :url_content, dependent: :destroy
 
   after_create :parse_url
