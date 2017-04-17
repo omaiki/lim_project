@@ -36,6 +36,7 @@ gem 'puma', '~> 3.0'
 
 
 gem 'rspec-rails'
+gem 'bootstrap-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
