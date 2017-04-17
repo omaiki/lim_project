@@ -50,6 +50,4 @@ class UrlsController < ApplicationController
   end
 
 
-
-
 end
