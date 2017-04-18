@@ -1,24 +1,36 @@
 
-# README
+# URL Parser
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* REST API to Parse URL's source code for HTML content
 
-Things you may want to cover:
+## Demo
 
-* Ruby version
+* 'https://lim-url-parser.herokuapp.com'
 
-* System dependencies
+## Tech stack
 
-* Configuration
+* Ruby on Rails
+* PostgreSQL
+* Nokogiri / OpenURI
 
-* Database creation
+## Instructions
 
-* Database initialization
+* run 'bundle install' in terminal
+* run 'rails s' in terminal
+* visit 'localhost:3000' in browser to see welcome page
+* Enter in full URL address to be parsed
 
-* How to run the test suite
+### Routing
 
-* Services (job queues, cache servers, search engines, etc.)
+* 'localhost:3000/urls' will reveal all parsed URLs in database
+* '#/urls/:id/url_contents' will reveal all content for HTML h1, h2, h3, and link tags for a specific URL
 
-* Deployment instructions
+
+### Tips
+
+* Use chrome extension 'JSON Viewer' to see a much clearer depiction of JSON data from parsed HTML content
+
+## Testing
+
+* To run Rspec testing suite, run 'rspec -fd spec' after 'bundle install'
 
