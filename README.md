@@ -24,7 +24,7 @@
 ### Routing
 
 * 'localhost:3000/urls' will reveal all parsed URLs in database
-* '#/urls/:id/url_contents' will reveal all content for HTML h1, h2, h3, and link tags for a specific URL
+* 'localhost:3000/urls/:id/url_contents' will reveal all content for HTML h1, h2, h3, and link tags for a specific URL
 
 
 ### Tips
