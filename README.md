@@ -1,11 +1,12 @@
 
 # URL Parser
 
-* REST API to Parse URL's source code for HTML content
+* REST API to Parse URL's source code for HTML content (h1, h2, h3, and link tags) 
+* Included simple front-end welcome page to show functionality 
 
 ## Demo
 
-* 'https://lim-url-parser.herokuapp.com'
+* [Demo deployed through Heroku](https://lim-url-parser.herokuapp.com)
 
 ## Tech stack
 
