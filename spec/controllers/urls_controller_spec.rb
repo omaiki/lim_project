@@ -16,7 +16,6 @@ RSpec.describe UrlsController, type: :controller do
     end
 
     it "routes to url show" do
-      get :show, params:  {id: @input_url}
       expect(:get => "/urls/1").to route_to("urls#show", :id => "1")
     end
 
